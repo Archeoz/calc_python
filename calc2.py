@@ -62,7 +62,7 @@ def button_click_handler(value):
 
 # Tampilan Aplikasi
 app = Tk()
-app.title('Simple Calc')
+app.title('Simple Calculator')
 
 # Memberikan warna latar belakang pada aplikasi
 app.configure(bg='lightblue')
