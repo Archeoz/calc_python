@@ -4,6 +4,7 @@ from tkinter import *
 def button_click(value):
     current = str(layar.get())
 
+
     # Menambahkan operator hanya jika operator baru ditekan
     if value in {'+', '-', '*', '/','%'}:
         if current and current[-1] in {'+', '-', '*', '/','%'}:
