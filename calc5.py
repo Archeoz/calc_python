@@ -103,4 +103,5 @@ app.mainloop()
 # 1. buat file pythonnya ( namaFile.py ), contoh kalkulator.py
 # 2. mulainya dari membuat aplikasi, layar kemudai tombolnya dulu lalu bikin functionnya
 # 3. semua function di buat di urutan code pertama atas sebelum / dibawahnya code import
+# 4. cara menjalankannya ada 2 cara, bisa di buka filenya di folder dan bisa menggunakan extension vs code yakni 'Code Runner' dari Jun Han ( setelah di instal nanti ada tombol segitiga hadap kanan di bagian kanan atas layar
 #                    === Selamat Belajar :) ===
