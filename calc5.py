@@ -100,6 +100,7 @@ for button in tombol:
 app.mainloop()
 
 # NB =
-# 1. mulainya dari membuat aplikasi, layar kemudai tombolnya dulu lalu bikin functionnya
-# 2. semua function di buat di urutan code paling atas sebelum / dibawahnya code import
+# 1. buat file pythonnya ( namaFile.py ), contoh kalkulator.py
+# 2. mulainya dari membuat aplikasi, layar kemudai tombolnya dulu lalu bikin functionnya
+# 3. semua function di buat di urutan code paling atas sebelum / dibawahnya code import
 #                    === Selamat Belajar :) ===
