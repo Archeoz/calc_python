@@ -4,16 +4,23 @@ from tkinter import *
 def button_click(value):
     current = str(layar.get())
 
-
-    # Menambahkan operator hanya jika operator baru ditekan
-    if value in {'+', '-', '*', '/','%'}:
-        if current and current[-1] in {'+', '-', '*', '/','%'}:
+    # Menangani kasus khusus untuk tombol 0
+    if value == '0':
+        if '.' in current and current.endswith('0.'):
+            return  # Hindari menambahkan lebih dari satu '0' setelah '.' (contoh: 0.00)
+        if current and current[-1] in {'+', '-', '*', '/', '%'}:
+            return  # Hindari menambahkan '0' setelah operator
+    elif value == '.':
+        if current and current[-1] == '.':
+            return  # Hindari menambahkan lebih dari satu tanda desimal (.)
+    else:
+        if current and current[-1] in {'+', '-', '*', '/', '%', '.'}:
             # Menggantikan operator terakhir dengan operator baru
             current = current[:-1]
 
     layar.delete(0, END)
     layar.insert(END, current + str(value))
-    
+
 def toggle_sign():
     current = str(layar.get())
     if current and current[0] == '-':
@@ -82,7 +89,7 @@ row_value = 1
 col_value = 0
 
 for button in tombol:
-    Button(app, text=button, width=4, height=2, command=lambda b=button: button_click_handler(b)).grid(padx=5, pady=5, row=row_value, column=col_value)
+    Button(app, text=button, width=4, height=2, command=lambda b=button: button_click_handler(b),font=('Arial', 12), bd=5, relief='raised').grid(padx=5, pady=5, row=row_value, column=col_value)
     col_value += 1    
     if col_value > 4:
         col_value = 0
