@@ -87,7 +87,7 @@ jumlah_column = 0
 # men-looping atau mengulang terus menerus button menggunakan 'for'
 for button in tombol:
     # menginisialisasi / memulai membuat button / tombol dan memfungsikan menggunakan command lambda dan mengarahkan ke function button_handler
-    Button(app,text=button,width=4,height=2,command= lambda b = button: button_handler(b),font=('Arial',12),bd=5).grid(padx=5,pady=5,row=jumlah_row,column=jumlah_column)
+    Button(app,text=button,width=4,height=2,command= lambda value = button: button_handler(value),font=('Arial',12),bd=5).grid(padx=5,pady=5,row=jumlah_row,column=jumlah_column)
     jumlah_column += 1
     # jika jumlah kolom / tombol dalam 1 baris sudah berjumlah 4 
     if jumlah_column > 3:
