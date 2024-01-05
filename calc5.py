@@ -98,10 +98,3 @@ for button in tombol:
 
 # menjalankan aplikasi dengan fungsi mainloop ( menjalankan dan mengulangi semua code dari atas ampai bawah )
 app.mainloop()
-
-# NB =
-# 1. install pythn di perangkatmu ( download dan install python melalui web resmi python )
-# 2. buat file pythonnya ( namaFile.py ), contoh kalkulator.py
-# 3. mulainya dari membuat aplikasi, layar kemudai tombolnya dulu lalu bikin functionnya
-# 4. semua function di buat di urutan code pertama atas sebelum / dibawahnya code import
-#                    === Selamat Belajar :) ===
