@@ -3,7 +3,7 @@ from tkinter import *
 
 # function buat handle tombol klik simbol operator
 def button_click_operator(value):
-    # ambil semua angka dan simbol di layar
+    # ambil semua angka dan simbol di layar dengan format string / str
     current = str(layar.get())
     # handle jika objek terakhir pda layar adalah simbol operasi hitung / operator maka akan dihapus
     if current and current[-1] in {'+','-','*','/'}:
@@ -67,7 +67,7 @@ app = Tk()
 # tambah tittle app
 app.title('testCalc2')
 
-# menginisalisasi / memulai untuk membangun / membuat tampilan layar
+# menginisalisasi / memulai untuk membangun / membuat tampilan layar yang bisa di isi ( Entry )
 layar = Entry(app, width=10, borderwidth=5, font=('Arial',30))
 # buat tampilan layarnya menggunakan grid
 layar.grid(row=0,column=0,padx=8,pady=8,columnspan=5)
