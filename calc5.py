@@ -90,7 +90,7 @@ for button in tombol:
     Button(app,text=button,width=4,height=2,command= lambda value = button: button_handler(value),font=('Arial',12),bd=5).grid(padx=5,pady=5,row=jumlah_row,column=jumlah_column)
     jumlah_column += 1
     # jika jumlah kolom / tombol dalam 1 baris sudah berjumlah 4 
-    if jumlah_column > 3:
+    if jumlah_column == 4:
     # maka akan menambah atau berpindah ke row atau baris baru kemudian -
         jumlah_row += 1
     # mengembalikan jumlah column ke 0
