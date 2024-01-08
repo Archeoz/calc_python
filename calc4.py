@@ -1,4 +1,11 @@
 from tkinter import *
+ 
+def button_click_operator(value):
+    current = str(layar.get())
+    if current and current[-1] in {'+','-','*','/'}:
+        current = current[:-1]
+    layar.delete(0,END)
+    layar.insert(END,surrent + str(value))
 
 def button_click(value):
     current = str(layar.get())
@@ -26,7 +33,7 @@ def hapus_satu():
 
 def button_handler(value):
     if value in {'+', '-', '*', '/'}:
-        button_click(value)
+        button_click_operator(value)
     elif value == '=':
         hitung()
     elif value == 'C':
@@ -50,6 +57,7 @@ tombol = [
     '7', '8', '9', {'text': '-', 'bg': 'lightblue'},
     '4', '5', '6', {'text': '+','bg': 'lightblue'},
     '1', '2', '3', {'text': '=','bg': 'cyan'},
+    '.', '0', '00','000',
 ]
 
 row_val = 1
