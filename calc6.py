@@ -10,7 +10,7 @@ def button_handler(value):
     elif value == 'C':
         hapus_all()
     else:
-        button_click(value)
+        button_click()
 
 def button_click_operator(value):
     current = str(layar.get())
@@ -22,8 +22,8 @@ def button_click_operator(value):
 def button_click(value):
     current = str(layar.get())
     layar.delete(0,END)
-    layar.insert(END,current + str(value))
-
+    layar.insert(END,current + str(layar.get()))
+    
 def hitung():
     current = str(layar.get())
     hasil = eval(current)
@@ -31,12 +31,12 @@ def hitung():
     layar.insert(END,str(hasil))
     
 def hapus_satu():
-    current= str(layar.get())
+    current = str(layar.get())
     if current:
         current = current[:-1]
         layar.delete(0,END)
         layar.insert(END,str(current))
-        
+
 def hapus_all():
     layar.delete(0,END)
 
@@ -49,19 +49,19 @@ layar.grid(row=0,column=0,columnspan=5,padx=8,pady=8)
 tombol = [
     'C','DEL','*','/',
     '7','8','9','-',
-    '4','6','7','+',
+    '4','5','6','+',
     '1','2','3','=',
     '.','0','00','000',
 ]
 
 row_val = 1
-col_val = 0
+col_val= 0
 
 for button in tombol:
-    Button(app,text=button,width=4,height=2,command=lambda b=button: button_handler(b),bd=5,font=('Arial',12)).grid(row=row_val,column=col_val,padx=5,pady=5)
-    col_val += 1
+    Button(app,text = button,width=4,height=2,command=lambda b=button: button_handler(b),bd=5,font=('Arial',12)).grid(padx=5,pady=5,row=row_val,column=col_val)
+    col_val +=1
     if col_val == 4:
-        row_val += 1
+        row_val+=1
         col_val = 0
-        
-app.mainloop()        
+
+app.mainloop()

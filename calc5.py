@@ -1,6 +1,25 @@
 # import module tkinter
 from tkinter import *
 
+# function buat handle semua tombol yang di klik
+def button_handler(value):
+    # jika tombol yang di klik adalah tombol operator/operasi hitung maka akan mengarahkan ke function button_click_operator
+    if value in {'+','-','*','/'}:
+        button_click_operator(value)
+    # jika tombol yang di klik adalah tombol = maka akan mengarahkan ke function hitung
+    elif value == '=':
+        hitung()
+    # jika tombol yang di klik adalah tombol DEL maka akan mengarahkan ke function hapus_satu
+    elif value == 'DEL':
+        hapus_satu()
+    # jika tombol yang di klik adalah tombol C maka akan mengarahkan ke function hapus_all
+    elif value == 'C':
+        hapus_all()
+    # jika tombol yang di klik adalah simbol selain yang di 'if' kan diatas maka akan mengarahkan ke function button_click
+    else:
+        button_click(value)
+    # akan mengahandle semua tombol lain selain yang disebutkan diatas dan diarahkan ke function button_click 
+
 # function buat handle tombol klik simbol operator
 def button_click_operator(value):
     # ambil semua angka dan simbol di layar dengan format string / str
@@ -43,24 +62,6 @@ def hapus_satu():
 # function buat handle tombol hapus semua atau C
 def hapus_all():
     layar.delete(0,END)
-
-# function buat handle semua tombol yang di klik
-def button_handler(value):
-    # jika tombol yang di klik adalah tombol operator/operasi hitung maka akan mengarahkan ke function button_click_operator
-    if value in {'+','-','*','/'}:
-        button_click_operator(value)
-    # jika tombol yang di klik adalah tombol = maka akan mengarahkan ke function hitung
-    elif value == '=':
-        hitung()
-    # jika tombol yang di klik adalah tombol DEL maka akan mengarahkan ke function hapus_satu
-    elif value == 'DEL':
-        hapus_satu()
-    # jika tombol yang di klik adalah tombol C maka akan mengarahkan ke function hapus_all
-    elif value == 'C':
-        hapus_all()
-    # jika tombol yang di klik adalah simbol selain yang di 'if' kan diatas maka akan mengarahkan ke function button_click
-    else:
-        button_click(value)
 
 # untuk membuat app kalkulator menggunakan tkinter
 app = Tk()
